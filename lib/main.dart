@@ -3,8 +3,9 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 //import 'package:pasha_debugd/screens/counter_screen.dart';
 //import 'package:pasha_debugd/screens/images.dart';
-import 'package:pasha_debugd/screens/registration_screen.dart';
-//import 'package:pasha_debugd/screens/login.dart';
+//import 'package:pasha_debugd/screens/registration_screen.dart';
+import 'package:pasha_debugd/screens/login.dart';
+import 'package:pasha_debugd/screens/splash_screen.dart';
 
 void main() {
   runApp(MyApp());
@@ -22,12 +23,14 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       // home: MyHomeScreen(),
-      // home: LoginScreen(),
+      //home: LoginScreen(),
       //home: RowColumnStack(),
       // home: Images(),
       // home: DashboardScreen(),
-      home: RegistrationScreen(),
+      // home: RegistrationScreen(),
       // home: CounterScreen(),
+      routes: {'/login': (context) => LoginScreen()},
+      home: SplashScreen(),
     );
   }
 }

@@ -1,17 +1,22 @@
-// import 'package:flutter/material.dart';
+import 'package:flutter/material.dart';
 
-// class DashboardScreen extends StatelessWidget {
-//   const DashboardScreen({super.key});
+class DashboardScreen extends StatelessWidget {
+  String email;
+  DashboardScreen({required this.email});
 
-//   @override
-//   Widget build(BuildContext context) {
-//     throw Scaffold(
-//       appBar: AppBar(
-//         title: const Text("Dashboard Screen"),
-//       ),
-//       body: Column(
-//         children: [ElevatedButton(onPressed: onPressed, child: child)],
-//       ),
-//     );
-//   }
-// }
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+        appBar: AppBar(
+          title: const Text("Dashboard Screen"),
+        ),
+        body: Column(children: [
+          Text("Loged in as $email"),
+          ElevatedButton(
+              onPressed: () {
+                Navigator.pop(context);
+              },
+              child: Text("Go Back"))
+        ]));
+  }
+}
